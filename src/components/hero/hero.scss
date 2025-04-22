@@ -1,0 +1,135 @@
+@import "../../app.scss";
+.hero{
+    height: calc(100vh - 100px);
+    overflow:hidden;
+    background:linear-gradient(180deg,#0c0c1d,#111132);
+    position:relative;
+    @include tablet{
+        height: calc(100vh - 200px);;
+    }
+    @include mobile{
+        height:100vh;
+    }
+
+    .wrapper{
+        max-width:1366px;
+        height:100%;
+        margin:auto;
+        @include tablet{
+            padding:0 10px;
+        }
+        .textContainer{
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            gap:40px;
+            @include mobile{
+                height:50%;
+                width:100%;
+                gap:20px;
+                align-items:center;
+                text-align:center;
+            }
+            h2{
+                font-size:30px;
+                color:rebeccapurple;
+                letter-spacing:10px;
+                @include tablet{
+                   font-size:20px;
+                }
+            }
+            h1{
+                font-size:88px;
+                @include tablet{
+                    font-size:45px;
+                }
+                @include mobile{
+                    font-size:40px;
+                }
+            }
+            .buttons{
+                z-index:990;
+                button{
+                    padding:20px;
+                    border:1px solid white;
+                    border-radius:10px;
+                    background-color:transparent;
+                    color:white;
+                    margin-right:20px;
+                    cursor:pointer !important;
+                    font-weight:300;
+                    &:hover {
+                      border:1px solid rebeccapurple;
+                      background-color: rebeccapurple;
+                      color: white;
+                    }
+                }
+                .contactBtn {
+                    background-color: white;
+                    color: black;
+                    transition: all 0.3s ease;
+                  
+                    &:hover {
+                      border:1px solid rebeccapurple;
+                      background-color: rebeccapurple;
+                      color: white;
+                    }
+                  }                  
+            }
+            img{
+               width:50px; 
+            }
+        }
+    }
+
+.imageContainer{
+    height:100%;
+    position:absolute;
+    top:0;
+    right:0;
+    @include mobile{
+        height:50%;
+        width:100%;
+        top:unset;
+        bottom:0;
+    }
+    img{
+        margin-top:100px;
+        margin-right:0px;
+        width: 700px;
+        height: auto;
+        object-fit:cover;
+        color:#663399 !important;
+        @include tablet{
+            height:auto;
+            width:360px;
+            margin-top:150px;
+            margin-right:0px;
+        }
+        @include mobile{
+            height:auto;
+            width:350px;
+            margin-top:0px !important;
+            margin-right:0px;
+        }
+    }
+}
+.slidingTextContainer{
+    position:absolute;
+    font-size:50vh;
+    bottom:-110px;
+    white-space:nowrap;
+    color:#ffffff09;
+    width:50%;
+    font-weight:bold;
+    @include tablet{
+        font-size:20vh;
+        bottom:0px;
+    }
+    @include mobile{
+        font-size:20vh;
+        bottom:80px;
+    }
+}
+}

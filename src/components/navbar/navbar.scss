@@ -1,0 +1,94 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    max-width: 1300px;
+    margin: auto;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      justify-content: flex-end;
+      padding: 20px;
+    }
+  }
+
+  span {
+    font-weight: bold;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(147, 194, 240, 0.2);
+
+  @include tablet {
+    margin-right: 8px;
+  }
+
+  @include mobile {
+    margin-right: 2px;
+    gap: 5px;
+  }
+
+  a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2); // Pop-up effect
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 600% 600%;
+    z-index: -1;
+    border-radius: 14px;
+    animation: borderFlow 8s linear infinite;
+    mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    padding: 2px;
+  }
+
+  @keyframes borderFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

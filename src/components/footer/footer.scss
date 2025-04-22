@@ -1,0 +1,53 @@
+@import "../../app.scss";
+
+$footer-text: #ffffff;
+$footer-link-hover: #ffffff;
+
+.footer {
+  color: $footer-text;
+  padding: 2rem;
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0.5rem 0;
+
+        a {
+          color: $footer-text;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $footer-link-hover;
+          }
+        }
+      }
+    }
+    .social {
+      margin-bottom: 0.5rem;
+    }
+    div > a {
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      color: $footer-text;
+
+      &:hover {
+        color: $footer-link-hover;
+      }
+    }
+  }
+  .copyright {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}

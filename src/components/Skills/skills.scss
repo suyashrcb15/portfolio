@@ -1,0 +1,185 @@
+@import "../../app.scss";
+.skills{
+    background:linear-gradient(100deg,#0c0c1d,#111132);
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    padding-bottom:15px;
+    .textContainer{
+        margin-top:20px;
+        margin-bottom:40px;
+        align-self:flex-end;
+        display:flex;
+        align-items:center;
+        gap:20px;
+        @include tablet{
+            gap:2px;
+        }
+        @include mobile{
+            align-self:center;
+            text-align:center;
+            flex-direction:column;
+        }
+        p{
+            font-weight:200;
+            font-size:20px;
+            color:gray;
+            text-align:right;
+            @include tablet{
+                font-size:16px;
+            }
+            @include mobile{
+                font-size:18px;
+                align-self:center;
+                text-align:center;
+                flex-direction:column;
+            }
+        }
+        hr{
+            width:500px;
+            border:none;
+            border-top:0.5px solid gray;
+            @include mobile{
+               width:300px;
+            }
+        }
+    }
+    .titleContainer{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-bottom:10px;
+        @include tablet{
+        margin-bottom:80px;
+        }
+        @include mobile{
+            width:100%;
+            margin-bottom:30px;
+        }
+        .title{
+            display:flex;
+            align-items:center;
+            gap:50px;
+            @include tablet{
+                gap:20px;
+            }
+            @include mobile{
+                gap:20px;
+                text-align:center;
+                flex-direction:column;
+            }
+            img{
+                width:300px;
+                height:100px;
+                border-radius:50px;
+                object-fit:cover;
+                @include tablet{
+                    width:250px;
+                    height:100px;
+                }
+                @include mobile{
+                    width:200px;
+                    height:50px;
+                }
+            }
+            h1{
+                font-size:96px;
+                font-weight:100;
+                @include tablet{
+                    font-size:40px;
+                }
+                @include mobile{
+                    font-size:20px;
+                    text-align:center;
+                    flex-direction:column;
+                }
+            }
+            button{
+                width:200px;
+                height:80px;
+                border-radius:50px;
+                background-color:#663399;
+                color:white;
+                border:none;
+                font-size:24px;
+                cursor:pointer;
+                @include tablet{
+                    font-size:20px;
+                    width:250px;
+                    height:60px;
+                }
+                @include mobile{
+                    font-size:16px;
+                    width:150px;
+                    height:50px;
+                }
+            }
+        }
+    }
+    .listContainer{
+        display:flex;
+        flex-direction:column;
+        max-width:1366px;
+        margin:auto;
+        @include tablet{
+            width:100%;
+            font-size:12px;
+            max-width:760px;
+        }
+        @include mobile{
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+        .list1,.list2{
+            display:flex;
+            flex-direction:row;
+            @include mobile{
+                flex-direction:column;
+            }
+        .box{
+            padding:20px;
+            width:300px;
+            border:0.5px solid gray;
+            display:flex;
+            flex-direction:column;
+            @include tablet{
+                padding:10px;
+                gap:4px;
+            }
+            @include mobile{
+               border:none;
+               align-items:center;
+               justify-content:center;
+               padding:10px;
+            }
+            p{
+                @include mobile{
+                   display:none;
+                }
+            }
+            button{
+                padding:10px;
+                margin-top: auto;
+                margin-bottom: 2px;
+                background-color:#663399;
+                border:none;
+                cursor:pointer;
+                color:white;
+                @include mobile{
+                    background-color:transparent;
+                    border:1px solid #663399;
+                    border-radius:5px;
+                    color:#663399;
+                    width:50%;
+                }
+                &:hover{
+                    background-color:#592d85;
+                }
+            }
+        }
+    }
+    }
+}
